@@ -1,4 +1,4 @@
-# Ikkita string tipdagi sonni integer tipga o'zgartirmasdan ko'paytirish kerak
+# leetcode:43 Ikkita string tipdagi sonni integer tipga o'zgartirmasdan ko'paytirish kerak
 
 class Solution(object):
     def multiply(self, num1, num2):
@@ -10,12 +10,21 @@ class Solution(object):
             for j in range(n1 - 1, -1, -1):
                 temp = int(num2[i]) * int(num1[j]) + carry + result[i + j + 1]
                 carry, result[i + j + 1] = divmod(temp, 10)
-                print(carry, result)
+            result[i + j] += carry
 
-        return result
+        res_1 = ""
+        res_2 = 0
+        len_result = len(result)
+        for i in range(len_result):
+            if not (result[i] == 0 and not res_1):
+                res_1 += str(result[i])
+                res_2 += result[i] * 10**(len_result - i - 1)
+
+        res_1 = int(res_1) if len(res_1) > 0 else 0
+        return res_1, res_2
 
 
 solution = Solution()
-result = solution.multiply(num1="5", num2="15")
+result = solution.multiply(num1="15", num2="2")
 
 print("result=", result)
