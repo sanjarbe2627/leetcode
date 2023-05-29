@@ -2,6 +2,9 @@
 
 class Solution(object):
     def multiply(self, num1, num2):
+        if num1 == "0" or num2 == "0":
+            return "0", 0
+
         n1, n2 = len(num1), len(num2)
         result = [0] * (n1 + n2)
 
@@ -20,7 +23,6 @@ class Solution(object):
                 res_1 += str(result[i])
                 res_2 += result[i] * 10**(len_result - i - 1)
 
-        res_1 = int(res_1) if len(res_1) > 0 else 0
         return res_1, res_2
 
 
