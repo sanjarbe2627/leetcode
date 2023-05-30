@@ -1,4 +1,5 @@
-# leetcode:43 Ikkita string tipdagi sonni integer tipga o'zgartirmasdan ko'paytirish kerak
+# leetcode:43 Medium
+# Ikkita string tipdagi sonni integer tipga o'zgartirmasdan ko'paytirish kerak
 
 class Solution(object):
     def multiply(self, num1, num2):

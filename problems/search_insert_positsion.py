@@ -1,4 +1,4 @@
-# leetcode: 35
+# leetcode: 35 Easy
 # Search Insert Position - List ichida maqsadimiz index ini topish, agar yoq bo'lsa o'rni indexsini qaytarish
 class Solution(object):
     def searchInsert(self, nums, target):
